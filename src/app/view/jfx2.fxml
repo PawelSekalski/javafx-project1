@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controler.controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Plik">
+            <items>
+                  <MenuItem fx:id="m_save" mnemonicParsing="false" onAction="#saveFile" text="Save" />
+              <MenuItem fx:id="m_close" mnemonicParsing="false" onAction="#closeApp" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="tf" opacity="0.32" text="nazwa pliku" />
+      <TextArea fx:id="ta" opacity="0.32" prefHeight="299.0" prefWidth="600.0" text="wpisać zawartość pliku" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btn_BC" mnemonicParsing="false" onMouseClicked="#upperCase" prefHeight="76.0" prefWidth="629.0" text="DUŻE LITERY" />
+            <Button fx:id="btn_LC" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#loweCase" prefHeight="76.0" prefWidth="629.0" text="małe litery" />
+            <Button fx:id="btn_EC" layoutX="310.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#Clear" prefHeight="76.0" prefWidth="629.0" text="Wyczyść zawartość" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
